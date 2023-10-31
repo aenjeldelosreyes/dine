@@ -8,8 +8,54 @@
     <string name="deal">HOT DEALS</string>
     <string name="popular">MOST POPULAR</string>
     <string name="prefer">MOST PREFERRED</string>
-<!--location names-->
+
+<!--    spacer      -->
+    <string name="spacer">____________________________________</string>
+
+<!--    location names  -->
     <string name="palmeras">Palmeras Garden Restaurant</string>
     <string name="sulyap">Sulyap Gallery Cafe</string>
     <string name="casa">Casa San Pablo</string>
+
+<!--    reviews     -->
+    <string name ="noOfReviewsPalmeras">68 reviews</string>
+    <string name="noOfRatingsPalmeras">4.52</string>
+
+    <string name="palmerasReview1">Love the place. Ample Space in parking been here 3 times already but they always serve their food. I really love the overall service thus far. Will come again.</string>
+    <string name="palmerasReview2">The place is quite spacious. It has staircases going down to the pond with dining area and an entertainment. Will come again sooner or later.</string>
+    <string name="palmerasReview3">The customer service is so amazing that I am able to relax and have fun in hosting my party and being able to enjoy everything.</string>
+<!--    others      -->
+    <string name="accredited">Accredited</string>
+    <string name="about">About this place</string>
+    <string name="where">Where you will be dining</string>
+    <string name="showMore">Show More >></string>
+    <string name="opening">Opening hours</string>
+    <string name="aboutPalmeras">Palmeras Garden Restaurant is a Filipino establishment that offers authentic local cuisine at reasonable prices. The restaurant boasts a relaxing ambiance and a garden theme that transports diners to a different time and place. Its interior design features classic Filipino architecture and decor, with a giant koi pond as its centerpiece.</string>
+    <string name="aboutMorePalmeras">Palmeras Garden Restaurant is a fine dining spot that offers great food, a relaxing ambiance, and excellent service. It is definitely worth a visit when in San Pablo City.</string>
+
+<!--    offers      -->
+    <string name="offers">What this place offers</string>
+    <string name="offerOutdoor">Outdoor seating</string>
+    <string name="offerWifi">Wifi</string>
+    <string name="offerReservation">Reservation</string>
+    <string name="offerParking">Free parking on premises</string>
+    <string name="offerCCTV">Security cameras on property</string>
+    <string name="offerCard">Credit cards accepted</string>
+    <string name="offerPWD">Wheelchair accessible</string>
+
+
+<!--    days        -->
+    <string name="sunday">SUNDAY</string>
+    <string name="monday">MONDAY</string>
+    <string name="tuesday">TUESDAY</string>
+    <string name="wednesday">WEDNESDAY</string>
+    <string name="thursday">THURSDAY</string>
+    <string name="friday">FRIDAY</string>
+    <string name="saturday">SATURDAY</string>
+
+<!--    hours -->
+    <string name="nine_elevenpm">9:00AM to 11:00PM </string>
+    <string name="nineam_ninepm">9:00AM to 9:00PM </string>
+    <string name="eleven_ninepm">11:00AM to 9:00PM </string>
+    <string name="close">CLOSED</string>
 </resources>
