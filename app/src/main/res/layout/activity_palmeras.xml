@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".Palmeras"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!--Vertical scroll-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--Location Img-->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgPalmeras"
+                    android:layout_width="match_parent"
+                    android:layout_height="350sp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintBottom_toTopOf="@+id/txtPalmeras"
+                    app:layout_constraintEnd_toEndOf="@+id/txtPalmeras"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/round_corners"
+                    app:srcCompat="@drawable/imgpalmeras" />
+                <!--Location Name-->
+                <TextView
+                    android:id="@+id/txtPalmeras"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Palmeras Garden Restaurant"
+                    android:textColor="#141414"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgPalmeras" />
+                <!--back button-->
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/round_btn"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_btn_back" />
+                <!--like button-->
+                <ImageButton
+                    android:id="@+id/btnHeart"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="10sp"
+                    android:background="@drawable/round_btn"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_btn_heart" />
+                <!--share button-->
+                <ImageButton
+                    android:id="@+id/btnShare"
+                    android:layout_width="48sp"
+                    android:layout_height="48sp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:padding="10sp"
+                    android:background="@drawable/round_btn"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toStartOf="@+id/btnHeart"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_btn_share" />
+                <!--icon star-->
+                <ImageView
+                    android:id="@+id/icStar"
+                    android:layout_width="16sp"
+                    android:layout_height="16sp"
+                    android:layout_marginStart="24sp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/ic_star"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPalmeras" />
+                <!--rating-->
+                <TextView
+                    android:id="@+id/txtRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="4.52"
+                    android:textColor="#141414"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/icStar"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPalmeras" />
+                <!--like icon-->
+                <ImageView
+                    android:id="@+id/icLike"
+                    android:layout_width="16sp"
+                    android:layout_height="16sp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintStart_toEndOf="@+id/txtRate"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPalmeras"
+                    app:srcCompat="@drawable/ic_like" />
+                <!--number of reviews-->
+                <TextView
+                    android:id="@+id/txtReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="68 reviews"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/icLike"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPalmeras" />
+                <!--accredited icon-->
+                <ImageView
+                    android:id="@+id/icAccredited"
+                    android:layout_width="16sp"
+                    android:layout_height="16sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintStart_toEndOf="@+id/txtReview"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPalmeras"
+                    app:srcCompat="@drawable/ic_medal" />
+                <!--accredited-->
+                <TextView
+                    android:id="@+id/txtAccredited"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="Accredited"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/icAccredited"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPalmeras" />
+                <!--dine location-->
+                <TextView
+                    android:id="@+id/txtDineLocation"
+                    android:layout_width="350sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="173 Pan-Philippine Hwy, San Pablo City, Laguna"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icStar" />
+                <!--spacer-->
+                <TextView
+                    android:id="@+id/spacer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="____________________________________"
+                    android:textAlignment="center"
+                    android:textColor="#BDBDBD"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDineLocation" />
+                <!--About-->
+                <TextView
+                    android:id="@+id/About"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="About this place"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spacer" />
+                <!--about details -->
+                <TextView
+                    android:id="@+id/txtAboutDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Palmeras Garden Restaurant is a Filipino establishment that offers authentic local cuisine at reasonable prices. The restaurant boasts a relaxing ambiance and a garden theme that transports diners to a different time and place. Its interior design features classic Filipino architecture and decor, with a giant koi pond as its centerpiece."
+                    android:textAlignment="viewStart"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/About" />
+                <!--spacer-->
+                <TextView
+                    android:id="@+id/spacer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:textSize="14sp"
+                    android:text="____________________________________"
+                    android:textAlignment="center"
+                    android:textColor="#BDBDBD"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtAboutDetails" />
+                <!--Palmeras profile pic-->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgRestoProfile"
+                    android:layout_width="200sp"
+                    android:layout_height="200sp"
+                    android:layout_marginTop="10dp"
+                    android:padding="10sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spacer2"
+                    app:shapeAppearanceOverlay="@style/round"
+                    app:srcCompat="@drawable/imgpalmeras"
+                    app:strokeColor="#99DDE7"
+                    app:strokeWidth="10sp" />
+                <!--Palmeras Name-->
+                <TextView
+                    android:id="@+id/txtPalmerasName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_extra_bold"
+                    android:text="Palmeras Garden Restaurant"
+                    android:textAlignment="center"
+                    android:textColor="#0E577E"
+                    android:textSize="26sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgRestoProfile" />
+                <!--more details-->
+                <TextView
+                    android:id="@+id/txtPalmerasdetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="fill"
+                    android:text="Palmeras Garden Restaurant is a fine dining spot that offers great food, a relaxing ambiance, and excellent service. It's definitely worth a visit when in San Pablo City."
+                    android:textColor="#141414"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPalmerasName" />
+                <!--message button-->
+                <Button
+                    android:id="@+id/btnMessage"
+                    android:layout_width="150sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="#40C0D8"
+                    android:fontFamily="@font/poppins_semi_bold"
+                    android:padding="16sp"
+                    android:text="MESSAGE"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPalmerasdetails" />
+                <!--spacer-->
+                <TextView
+                    android:id="@+id/spacer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="____________________________________"
+                    android:textAlignment="center"
+                    android:textColor="#BDBDBD"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnMessage" />
+                <!--Offers-->
+                <TextView
+                    android:id="@+id/txtOffers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="What this place offers"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spacer3" />
+                <!--Offers details-->
+
+                <TextView
+                    android:id="@+id/txtOffersDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="fill"
+                    android:text="Outdoor seating"
+                    android:textColor="#141414"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/icTable"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOffers" />
+
+                <ImageView
+                    android:id="@+id/icTable"
+                    android:layout_width="22sp"
+                    android:layout_height="22sp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOffers"
+                    app:srcCompat="@drawable/ic_table" />
+
+                <TextView
+                    android:id="@+id/txtOffersDetails1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="fill"
+                    android:text="Wifi"
+                    android:textColor="#141414"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/icWifi"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOffersDetails" />
+
+                <ImageView
+                    android:id="@+id/icWifi"
+                    android:layout_width="22sp"
+                    android:layout_height="22sp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toStartOf="@+id/txtOffersDetails1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icTable"
+                    app:srcCompat="@drawable/ic_wifi" />
+
+                <TextView
+                    android:id="@+id/txtOffersDetails2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="fill"
+                    android:text="Reservation"
+                    android:textColor="#141414"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/icReserve"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOffersDetails1" />
+
+                <ImageView
+                    android:id="@+id/icReserve"
+                    android:layout_width="22sp"
+                    android:layout_height="22sp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icWifi"
+                    app:srcCompat="@drawable/ic_calendar" />
+
+                <TextView
+                    android:id="@+id/txtOffersDetails3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="fill"
+                    android:text="Free parking on premises"
+                    android:textColor="#141414"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/icParking"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOffersDetails2" />
+
+                <ImageView
+                    android:id="@+id/icParking"
+                    android:layout_width="22sp"
+                    android:layout_height="22sp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icReserve"
+                    app:srcCompat="@drawable/ic_car" />
+
+                <TextView
+                    android:id="@+id/txtOffersDetails4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="fill"
+                    android:text="Security cameras on property"
+                    android:textColor="#141414"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/icCCTV"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOffersDetails3" />
+
+                <ImageView
+                    android:id="@+id/icCCTV"
+                    android:layout_width="22sp"
+                    android:layout_height="22sp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icParking"
+                    app:srcCompat="@drawable/ic_cctv" />
+
+                <TextView
+                    android:id="@+id/txtOffersDetails5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="fill"
+                    android:text="Credit cards accepted"
+                    android:textColor="#141414"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/icCard"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOffersDetails4" />
+
+                <ImageView
+                    android:id="@+id/icCard"
+                    android:layout_width="22sp"
+                    android:layout_height="22sp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icCCTV"
+                    app:srcCompat="@drawable/ic_card" />
+
+                <TextView
+                    android:id="@+id/txtOffersDetails6"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="fill"
+                    android:text="Wheelchair accessible"
+                    android:textColor="#141414"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/icWheelChair"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOffersDetails5" />
+
+                <ImageView
+                    android:id="@+id/icWheelChair"
+                    android:layout_width="22sp"
+                    android:layout_height="22sp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/icCard"
+                    app:srcCompat="@drawable/ic_pwd" />
+                <!--spacer-->
+                <TextView
+                    android:id="@+id/spacer4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="____________________________________"
+                    android:textAlignment="center"
+                    android:textColor="#BDBDBD"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOffersDetails6" />
+                <!--Where-->
+                <TextView
+                    android:id="@+id/txtWhere"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Where you'll be dining"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spacer4" />
+                <!--Where image-->
+                <ImageView
+                    android:id="@+id/imgPalmerasGoogleMap"
+                    android:layout_width="match_parent"
+                    android:layout_height="250sp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtWhere"
+                    app:srcCompat="@drawable/imgpalmeraslocation" />
+                <!--spacer-->
+                <TextView
+                    android:id="@+id/spacer5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="____________________________________"
+                    android:textAlignment="center"
+                    android:textColor="#BDBDBD"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imgPalmerasGoogleMap" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--Horizontal scroll-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bottomConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--icon star-->
+                <ImageView
+                    android:id="@+id/icStar2"
+                    android:layout_width="16sp"
+                    android:layout_height="16sp"
+                    android:layout_marginStart="24sp"
+                    android:layout_marginTop="2dp"
+                    android:src="@drawable/ic_star"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--rating-->
+                <TextView
+                    android:id="@+id/txtRate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="4.52"
+                    android:textColor="#141414"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/icStar2"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--like icon-->
+                <ImageView
+                    android:id="@+id/icLike2"
+                    android:layout_width="16sp"
+                    android:layout_height="16sp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="2dp"
+                    app:layout_constraintStart_toEndOf="@+id/txtRate2"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_like" />
+                <!--number of reviews-->
+                <TextView
+                    android:id="@+id/txtReview2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="3sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="68 reviews"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/icLike2"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <!--reviews-->
+                <!--horizontal scroll-->
+                <HorizontalScrollView
+                    android:id="@+id/horizontalReviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0sp"
+                    android:layout_marginBottom="25sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15sp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="235sp"
+                            android:layout_height="155sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_marginBottom="10sp"
+                            app:cardCornerRadius="15sp"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:id="@+id/review1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_margin="10sp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10sp"
+                                android:text="Love the place. Ample Space in parking been here 3 times already but they always serve their food. I really love the overall service thus far. Will come again."
+                                android:textColor="#141414"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/seeMore1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_margin="10sp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingLeft="10sp"
+                                android:text="Show More >>"
+                                android:textColor="#141414"
+                                android:textSize="12sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="235sp"
+                            android:layout_height="155sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_marginBottom="10sp"
+                            app:cardCornerRadius="15sp"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:id="@+id/review2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_margin="10sp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10sp"
+                                android:text="The place is quite spacious. It has staircases going down to the pond with dining area and an entertainment. Will come again sooner or later."
+                                android:textColor="#141414"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/seeMore2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_margin="10sp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingLeft="10sp"
+                                android:text="Show More >>"
+                                android:textColor="#141414"
+                                android:textSize="12sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="235sp"
+                            android:layout_height="155sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginRight="20sp"
+                            android:layout_marginBottom="10sp"
+                            app:cardCornerRadius="15sp"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:id="@+id/review3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="top"
+                                android:layout_margin="10sp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:padding="10sp"
+                                android:text="The customer service is so amazing that I am able to relax and have fun in hosting my party and being able to enjoy everything."
+                                android:textColor="#141414"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/seeMore3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_margin="10sp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingLeft="10sp"
+                                android:text="Show More >>"
+                                android:textColor="#141414"
+                                android:textSize="12sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+                <!--spacer-->
+                <TextView
+                    android:id="@+id/spacer6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="____________________________________"
+                    android:textAlignment="center"
+                    android:textColor="#BDBDBD"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/horizontalReviews" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtOpening"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="7dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Opening hours"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtDay1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="fill"
+                    android:text="SUNDAY"
+                    android:textColor="#141414"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/txtHour1"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOpening" />
+
+                <TextView
+                    android:id="@+id/txtHour1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="fill"
+                    android:text="9:00AM to 11:00PM"
+                    android:textAlignment="textEnd"
+                    android:textColor="#1A9AB7"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtDay1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtOpening" />
+
+                <TextView
+                    android:id="@+id/txtDay2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="fill"
+                    android:text="TUESDAY - SATURDAY"
+                    android:textColor="#141414"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtDay1" />
+
+                <TextView
+                    android:id="@+id/txtHour2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="fill"
+                    android:text="11:00AM to 9:00PM"
+                    android:textAlignment="textEnd"
+                    android:textColor="#1A9AB7"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txtDay1"
+                    app:layout_constraintTop_toBottomOf="@+id/txtHour1" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/reserveNowBtn1"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginStart="24sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24sp"
+            android:layout_marginBottom="24dp"
+            android:backgroundTint="#40C0D8"
+            android:fontFamily="@font/poppins_extra_bold"
+            android:padding="16sp"
+            android:text="RESERVE NOW"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

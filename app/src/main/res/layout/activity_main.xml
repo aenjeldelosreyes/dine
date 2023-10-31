@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="1sp"
+    tools:layout_editor_absoluteY="1sp"
+    android:fillViewport="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:background="#FFFFFF">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!--//Search Section-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/searchConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#2CA1BF">
+
+                <TextView
+                    android:id="@+id/txtLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="285dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="Location"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtPinLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:fontFamily="@font/poppins_light"
+                    android:text="18D Werner Schetelig Ave"
+                    android:textSize="16sp"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="@+id/txtLocation"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/txtLocation"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLocation" />
+
+                <EditText
+                    android:id="@+id/searchBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:layout_marginStart="24sp"
+                    android:layout_marginTop="16sp"
+                    android:layout_marginEnd="24sp"
+                    android:background="@drawable/search_bar_bg"
+                    android:drawableStart="@drawable/ic_search"
+                    android:ems="10"
+                    android:hint="Tara na! Saan tayo?"
+                    android:textSize="16sp"
+                    android:textColorHint="#BDBDBD"
+                    android:inputType="text"
+                    android:padding="14sp"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="@+id/txtPinLocation"
+                    app:layout_constraintHorizontal_bias="0.117"
+                    app:layout_constraintStart_toStartOf="@+id/txtPinLocation"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPinLocation" />
+
+                <ImageView
+                    android:id="@+id/top_left_radius"
+                    android:layout_width="match_parent"
+                    android:layout_height="70sp"
+                    android:layout_marginTop="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/searchBar"
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/rounded_corner_top_left" />
+
+                <TextView
+                    android:id="@+id/allButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="18sp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins_extra_bold"
+                    android:text="All"
+                    android:textAlignment="center"
+                    android:textColor="#2CA1BF"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/cafe"
+                    app:layout_constraintStart_toStartOf="@+id/top_left_radius"
+                    app:layout_constraintTop_toTopOf="@+id/top_left_radius" />
+
+                <TextView
+                    android:id="@+id/cafe"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18sp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Cafe"
+                    android:textAlignment="center"
+                    android:textColor="#BDBDBD"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/alFrescoButton"
+                    app:layout_constraintStart_toEndOf="@+id/allButton"
+                    app:layout_constraintTop_toTopOf="@+id/top_left_radius" />
+
+                <TextView
+                    android:id="@+id/alFrescoButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="18sp"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Al Fresco"
+                    android:textAlignment="center"
+                    android:textColor="#BDBDBD"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/top_left_radius"
+                    app:layout_constraintStart_toEndOf="@+id/cafe"
+                    app:layout_constraintTop_toTopOf="@+id/top_left_radius" />
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--//Hot Deals Section-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/hotDealsConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtHotDeals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:fontFamily="@font/poppins_extra_bold"
+                    android:text="HOT DEALS"
+                    android:textColor="#0E577E"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="235sp"
+                            android:layout_height="155sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_marginBottom="10sp"
+                            app:cardCornerRadius="15sp"
+                            android:backgroundTint="@color/white">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgHotDealsResto1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="25sp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/round_corner"
+                                app:srcCompat="@drawable/resto1" />
+
+                            <TextView
+                                android:id="@+id/nameHotDealsResto1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="2sp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingLeft="14sp"
+                                android:text="Sulyap Gallery Cafe"
+                                android:textColor="#1C1B1B"
+                                android:textSize="12sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="235sp"
+                            android:layout_height="155sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_marginBottom="10sp"
+                            app:cardCornerRadius="15sp"
+                            android:backgroundTint="@color/white">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgHotDealsResto2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="25sp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/round_corner"
+                                app:srcCompat="@drawable/resto2" />
+
+                            <TextView
+                                android:id="@+id/nameHotDealsResto2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="2sp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingLeft="14sp"
+                                android:text="Casa San Pablo"
+                                android:textColor="#1C1B1B"
+                                android:textSize="12sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/hotPalmeras"
+                            android:layout_width="235sp"
+                            android:layout_height="155sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginTop="18sp"
+                            android:layout_marginRight="20sp"
+                            android:layout_marginBottom="10sp"
+                            app:cardCornerRadius="15sp"
+                            android:backgroundTint="@color/white">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgHotDealsResto3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="25sp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/round_corner"
+                                app:srcCompat="@drawable/resto3" />
+
+                            <TextView
+                                android:id="@+id/nameHotDealsResto3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="2sp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingLeft="14sp"
+                                android:text="Palmeras Garden Restaurant"
+                                android:textColor="#1C1B1B"
+                                android:textSize="12sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--//Most Popular Section-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mostPopularConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtMostPopular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/poppins_extra_bold"
+                    android:text="MOST POPULAR"
+                    android:textColor="#0E577E"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/popularPalmeras"
+                            android:layout_width="235sp"
+                            android:layout_height="155sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginTop="48sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_marginBottom="10sp"
+                            app:cardCornerRadius="15sp"
+                            android:backgroundTint="@color/white">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgMostPopularResto1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="25sp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/round_corner"
+                                app:srcCompat="@drawable/resto3" />
+
+                            <TextView
+                                android:id="@+id/nameMostPopularResto1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="2sp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingLeft="14sp"
+                                android:text="Palmeras Garden Restaurant"
+                                android:textColor="#1C1B1B"
+                                android:textSize="12sp" />
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="235sp"
+                            android:layout_height="155sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginTop="48sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_marginBottom="10sp"
+                            app:cardCornerRadius="15sp"
+                            android:backgroundTint="@color/white">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgMostPopularResto2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="25sp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/round_corner"
+                                app:srcCompat="@drawable/resto1" />
+
+                            <TextView
+                                android:id="@+id/nameMostPopularResto2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="2sp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingLeft="14sp"
+                                android:text="Sulyap Gallery Cafe"
+                                android:textColor="#1C1B1B"
+                                android:textSize="12sp" />
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="235sp"
+                            android:layout_height="155sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginTop="48sp"
+                            android:layout_marginRight="20sp"
+                            android:layout_marginBottom="10sp"
+                            app:cardCornerRadius="15sp"
+                            android:backgroundTint="@color/white">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgMostPopularResto3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="25sp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/round_corner"
+                                app:srcCompat="@drawable/resto2" />
+
+                            <TextView
+                                android:id="@+id/nameMostPopularResto3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="2sp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingLeft="14sp"
+                                android:text="Casa San Pablo"
+                                android:textColor="#1C1B1B"
+                                android:textSize="12sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <!--//Most Preferred Section-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mostPreferredConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="350sp">
+
+                <TextView
+                    android:id="@+id/txtMostPreferred"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="16sp"
+                    android:fontFamily="@font/poppins_extra_bold"
+                    android:text="MOST PREFERRED"
+                    android:textColor="#0E577E"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="235sp"
+                            android:layout_height="155sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginTop="48sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_marginBottom="10sp"
+                            android:backgroundTint="@color/white"
+                            app:cardCornerRadius="15sp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgMostPreferredResto1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="25sp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/round_corner"
+                                app:srcCompat="@drawable/resto2" />
+
+                            <TextView
+                                android:id="@+id/nameMostPreferredResto1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="2sp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingLeft="14sp"
+                                android:text="Casa San Pablo"
+                                android:textColor="#1C1B1B"
+                                android:textSize="12sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/preferPalmeras"
+                            android:layout_width="235sp"
+                            android:layout_height="155sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginTop="48sp"
+                            android:layout_marginRight="10sp"
+                            android:layout_marginBottom="10sp"
+                            android:backgroundTint="@color/white"
+                            app:cardCornerRadius="15sp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgMostPreferredResto2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="25sp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/round_corner"
+                                app:srcCompat="@drawable/resto3" />
+
+                            <TextView
+                                android:id="@+id/nameMostPreferredResto2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="2sp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingLeft="14sp"
+                                android:text="Palmeras Garden Restaurant"
+                                android:textColor="#1C1B1B"
+                                android:textSize="12sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="235sp"
+                            android:layout_height="155sp"
+                            android:layout_marginLeft="20sp"
+                            android:layout_marginTop="48sp"
+                            android:layout_marginRight="20sp"
+                            android:layout_marginBottom="10sp"
+                            android:backgroundTint="@color/white"
+                            app:cardCornerRadius="15sp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/imgMostPreferredResto3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="25sp"
+                                android:scaleType="fitXY"
+                                app:shapeAppearanceOverlay="@style/round_corner"
+                                app:srcCompat="@drawable/resto1" />
+
+                            <TextView
+                                android:id="@+id/nameMostPreferredResto3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="2sp"
+                                android:fontFamily="@font/poppins_bold"
+                                android:paddingLeft="14sp"
+                                android:text="Sulyap Gallery Cafe"
+                                android:textColor="#1C1B1B"
+                                android:textSize="12sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
