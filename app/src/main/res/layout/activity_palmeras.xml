@@ -51,7 +51,7 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="24dp"
                     android:fontFamily="@font/poppins_bold"
-                    android:text="Palmeras Garden Restaurant"
+                    android:text="@string/palmeras"
                     android:textColor="#141414"
                     android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -168,7 +168,7 @@
                     android:layout_marginTop="16dp"
                     android:textSize="14sp"
                     android:fontFamily="@font/poppins_light"
-                    android:text="173 Pan-Philippine Hwy, San Pablo City, Laguna"
+                    android:text="@string/palmerasLocation"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/icStar" />
                 <!--spacer-->
@@ -249,7 +249,7 @@
                     android:layout_marginTop="16dp"
                     android:layout_marginEnd="24dp"
                     android:fontFamily="@font/poppins_extra_bold"
-                    android:text="Palmeras Garden Restaurant"
+                    android:text="@string/palmeras"
                     android:textAlignment="center"
                     android:textColor="#0E577E"
                     android:textSize="26sp"

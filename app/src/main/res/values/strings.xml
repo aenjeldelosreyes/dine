@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">Dine</string>
+    <string name="app_name">SanPabLOOK</string>
+    <string name="location">Location</string>
+    <string name="pinLocation">18D Werner Schetelig Ave</string>
+    <string name="hint">Tara na! Saan tayo?</string>
+    <string name="palmerasLocation">173 Pan-Philippine Hwy, San Pablo City, Laguna</string>
+<!--    choices     -->
+    <string name="deal">HOT DEALS</string>
+    <string name="popular">MOST POPULAR</string>
+    <string name="prefer">MOST PREFERRED</string>
+<!--location names-->
+    <string name="palmeras">Palmeras Garden Restaurant</string>
+    <string name="sulyap">Sulyap Gallery Cafe</string>
+    <string name="casa">Casa San Pablo</string>
 </resources>
