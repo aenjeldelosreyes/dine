@@ -59,7 +59,14 @@ public class Palmeras extends AppCompatActivity {
         btnShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Palmeras.this, "You shared this location", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                String Body = "Download this App";
+                String Sub = "http://play.google.com";
+                intent.putExtra(Intent.EXTRA_TEXT, Body);
+                intent.putExtra(Intent.EXTRA_TEXT, Sub);
+                startActivity(Intent.createChooser(intent, "Share using"));
+                Toast.makeText(Palmeras.this, "You are sharing SanPabLOOK", Toast.LENGTH_SHORT).show();
             }
         });
 
