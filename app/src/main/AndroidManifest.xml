@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Dine"
         tools:targetApi="31">
         <activity
+            android:name=".reservation_palmeras"
+            android:exported="false" />
+        <activity
             android:name=".Palmeras"
             android:exported="false" />
         <activity
