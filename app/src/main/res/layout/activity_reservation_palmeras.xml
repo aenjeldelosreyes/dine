@@ -6,4 +6,153 @@
     android:layout_height="match_parent"
     tools:context=".reservation_palmeras">
 
+<!--return button-->
+    <ImageButton
+        android:id="@+id/btnReturn"
+        android:layout_width="48sp"
+        android:layout_height="48sp"
+        android:padding="0dp"
+        android:layout_marginStart="16sp"
+        android:layout_marginTop="16sp"
+        android:src="@drawable/ic_btn_arrow_back"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+<!--title-->
+    <TextView
+        android:id="@+id/txtReviewReserve"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/reviewReserve"
+        android:textSize="22sp"
+        app:layout_constraintStart_toEndOf="@+id/btnReturn"
+        app:layout_constraintTop_toTopOf="parent" />
+<!--spacer-->
+    <TextView
+        android:id="@+id/spacer1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="@string/spacer"
+        android:textColor="#BDBDBD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtReviewReserve" />
+<!--imgPalmeras-->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imgPalmerasReservation"
+        android:layout_width="155sp"
+        android:layout_height="155sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spacer1"
+        app:shapeAppearanceOverlay="@style/round_corner"
+        app:srcCompat="@drawable/imgpalmeras" />
+
+    <TextView
+        android:id="@+id/txtDineIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Dine-in Reservation"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgPalmerasReservation"
+        app:layout_constraintTop_toBottomOf="@+id/spacer1" />
+<!--txtPalmeras-->
+    <TextView
+        android:id="@+id/txtPalmerasReservation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/palmeras"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imgPalmerasReservation"
+        app:layout_constraintTop_toBottomOf="@+id/txtDineIn" />
+
+    <ImageView
+        android:id="@+id/ic_star"
+        android:layout_width="16sp"
+        android:layout_height="16sp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintStart_toEndOf="@+id/imgPalmerasReservation"
+        app:layout_constraintTop_toBottomOf="@+id/txtPalmerasReservation"
+        app:srcCompat="@drawable/ic_star" />
+
+    <TextView
+        android:id="@+id/txtRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/poppins_light"
+        android:textSize="14sp"
+        android:textColor="#141414"
+        android:text="@string/noOfRatingsPalmeras"
+        app:layout_constraintStart_toEndOf="@+id/ic_star"
+        app:layout_constraintTop_toBottomOf="@+id/txtPalmerasReservation" />
+
+    <ImageView
+        android:id="@+id/ic_accredited"
+        android:layout_width="16sp"
+        android:layout_height="16sp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="26dp"
+        app:layout_constraintStart_toEndOf="@+id/txtRating"
+        app:layout_constraintTop_toBottomOf="@+id/txtPalmerasReservation"
+        app:srcCompat="@drawable/ic_medal" />
+
+    <TextView
+        android:id="@+id/txt_accredited"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/accredited"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="#141414"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ic_accredited"
+        app:layout_constraintTop_toBottomOf="@+id/txtPalmerasReservation" />
+
+    <TextView
+        android:id="@+id/spacer2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/spacer"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="#BDBDBD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgPalmerasReservation" />
+
+    <TextView
+        android:id="@+id/txtYourReservation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Your Reservation"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="#141414"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spacer2" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

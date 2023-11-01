@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -12,6 +13,7 @@ public class Palmeras extends AppCompatActivity {
     ImageButton btnHeart;
     ImageButton btnShare;
     private boolean isLike;
+    Button reserveNowBtn1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,14 +25,10 @@ public class Palmeras extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(Palmeras.this,MainActivity.class);
-                startActivity(intent);
-//                finish();
+                onBackPressed();
 
             }
         });
-
-
         //        like button
         btnHeart=findViewById(R.id.btnHeart);
         btnHeart.setOnClickListener(new View.OnClickListener() {
@@ -67,6 +65,17 @@ public class Palmeras extends AppCompatActivity {
                 intent.putExtra(Intent.EXTRA_TEXT, Sub);
                 startActivity(Intent.createChooser(intent, "Share using"));
                 Toast.makeText(Palmeras.this, "You are sharing SanPabLOOK", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+//        reserve now button
+        Button reserveNowBtn1 = findViewById(R.id.reserveNowBtn1);
+        reserveNowBtn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(Palmeras.this, com.example.dine.reservation_palmeras.class);
+                startActivity(intent);
+
             }
         });
 

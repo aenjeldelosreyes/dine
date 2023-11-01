@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SanPabLOOK</string>
     <string name="location">Location</string>
+    <string name="reviewReserve">Review Reservation</string>
     <string name="pinLocation">18D Werner Schetelig Ave</string>
     <string name="hint">Tara na! Saan tayo?</string>
     <string name="palmerasLocation">173 Pan-Philippine Hwy, San Pablo City, Laguna</string>
