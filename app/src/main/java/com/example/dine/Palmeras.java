@@ -25,9 +25,11 @@ public class Palmeras extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent=new Intent(Palmeras.this,MainActivity.class);
                 startActivity(intent);
+//                finish();
 
             }
         });
+
 
         //        like button
         btnHeart=findViewById(R.id.btnHeart);
@@ -52,7 +54,6 @@ public class Palmeras extends AppCompatActivity {
 
             }
         });
-
         //        share button
         btnShare = findViewById(R.id.btnShare);
         btnShare.setOnClickListener(new View.OnClickListener() {

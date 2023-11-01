@@ -207,6 +207,7 @@
                     android:layout_marginEnd="24dp"
                     android:fontFamily="@font/poppins_regular"
                     android:text="@string/aboutPalmeras"
+                    android:justificationMode="inter_word"
                     android:textAlignment="viewStart"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -267,6 +268,7 @@
                     android:fontFamily="@font/poppins_regular"
                     android:gravity="fill"
                     android:text="@string/aboutMorePalmeras"
+                    android:justificationMode="inter_word"
                     android:textColor="#141414"
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -640,6 +642,7 @@
                                 android:fontFamily="@font/poppins_regular"
                                 android:padding="10sp"
                                 android:text="@string/palmerasReview1"
+                                android:justificationMode="inter_word"
                                 android:textColor="#141414"
                                 android:textSize="12sp" />
 
@@ -676,6 +679,7 @@
                                 android:fontFamily="@font/poppins_regular"
                                 android:padding="10sp"
                                 android:text="@string/palmerasReview2"
+                                android:justificationMode="inter_word"
                                 android:textColor="#141414"
                                 android:textSize="12sp" />
 
@@ -712,6 +716,7 @@
                                 android:fontFamily="@font/poppins_regular"
                                 android:padding="10sp"
                                 android:text="@string/palmerasReview3"
+                                android:justificationMode="inter_word"
                                 android:textColor="#141414"
                                 android:textSize="12sp" />
 
