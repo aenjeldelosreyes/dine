@@ -238,7 +238,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/spacer2"
                     app:shapeAppearanceOverlay="@style/round"
-                    app:srcCompat="@drawable/imgpalmeras"
+                    app:srcCompat="@drawable/img_palmeras"
                     app:strokeColor="#99DDE7"
                     app:strokeWidth="10sp" />
                 <!--Palmeras Name-->
@@ -283,7 +283,7 @@
                     android:backgroundTint="#40C0D8"
                     android:fontFamily="@font/poppins_semi_bold"
                     android:padding="16sp"
-                    android:text="MESSAGE"
+                    android:text="@string/message"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtPalmerasdetails" />
@@ -999,12 +999,11 @@
             android:backgroundTint="#40C0D8"
             android:fontFamily="@font/poppins_extra_bold"
             android:padding="16sp"
-            android:text="RESERVE NOW"
+            android:text="@string/btnReserve"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

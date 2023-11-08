@@ -5,6 +5,17 @@
     <string name="pinLocation">18D Werner Schetelig Ave</string>
     <string name="hint">Tara na! Saan tayo?</string>
     <string name="palmerasLocation">173 Pan-Philippine Hwy, San Pablo City, Laguna</string>
+
+    <!--   buttons    -->
+    <string name="all">All</string>
+    <string name="cafe">Cafe</string>
+    <string name="alFresco">Al Fresco</string>
+    <string name="message">MESSAGE</string>
+    <string name="btnReserve">RESERVE NOW</string>
+    <string name="showMore">Show More >></string>
+    <string name="add">Add</string>
+    <string name="confirm">CONFIRM RESERVATION</string>
+
     <!--    choices     -->
     <string name="deal">HOT DEALS</string>
     <string name="popular">MOST POPULAR</string>
@@ -21,18 +32,29 @@
     <!--    reviews     -->
     <string name="noOfReviewsPalmeras">68 reviews</string>
     <string name="noOfRatingsPalmeras">4.52</string>
-
+    <!--    palmeras reviews    -->
     <string name="palmerasReview1">Love the place. Ample Space in parking been here 3 times already but they always serve their food. I really love the overall service thus far. Will come again.</string>
     <string name="palmerasReview2">The place is quite spacious. It has staircases going down to the pond with dining area and an entertainment. Will come again sooner or later.</string>
     <string name="palmerasReview3">The customer service is so amazing that I am able to relax and have fun in hosting my party and being able to enjoy everything.</string>
-    <!--    others      -->
+
+    <!--    palmeras info/short description     -->
+    <string name="aboutPalmeras">Palmeras Garden Restaurant is a Filipino establishment that offers authentic local cuisine at reasonable prices. The restaurant boasts a relaxing ambiance and a garden theme that transports diners to a different time and place. Its interior design features classic Filipino architecture and decor, with a giant koi pond as its centerpiece.</string>
+    <string name="aboutMorePalmeras">Palmeras Garden Restaurant is a fine dining spot that offers great food, a relaxing ambiance, and excellent service. It is definitely worth a visit when in San Pablo City.</string>
+
+    <!--    subtitles      -->
     <string name="accredited">Accredited</string>
     <string name="about">About this place</string>
     <string name="where">Where you will be dining</string>
-    <string name="showMore">Show More >></string>
     <string name="opening">Opening hours</string>
-    <string name="aboutPalmeras">Palmeras Garden Restaurant is a Filipino establishment that offers authentic local cuisine at reasonable prices. The restaurant boasts a relaxing ambiance and a garden theme that transports diners to a different time and place. Its interior design features classic Filipino architecture and decor, with a giant koi pond as its centerpiece.</string>
-    <string name="aboutMorePalmeras">Palmeras Garden Restaurant is a fine dining spot that offers great food, a relaxing ambiance, and excellent service. It is definitely worth a visit when in San Pablo City.</string>
+    <string name="yourReservation">Your Reservation</string>
+    <string name="dates">Dates</string>
+    <string name="time">Time</string>
+    <string name="guests">Guests</string>
+    <string name="requirements">Requirements</string>
+    <string name="messagePlace">Message the place</string>
+    <string name="messagePlaceDetails">Message for inquiries, who is coming with you, and what you need for the dine-in.</string>
+    <string name="phoneNumber">Phone Number</string>
+    <string name="phoneNumberDetails">Add and confirm your phone number to get updates.</string>
 
     <!--    offers      -->
     <string name="offers">What this place offers</string>
@@ -43,7 +65,6 @@
     <string name="offerCCTV">Security cameras on property</string>
     <string name="offerCard">Credit cards accepted</string>
     <string name="offerPWD">Wheelchair accessible</string>
-
 
     <!--    days        -->
     <string name="sunday">SUNDAY</string>
